@@ -30,7 +30,7 @@ public class SqlConnection {
                 if(userInput == 1){
                     System.out.println("Enter task name: ");
                     String taskName = scanner.nextLine();
-                    if(taskName.length() > 25){
+                    if(taskName.length() > 50){
                         System.out.println("Task too long to fit!");
                     }else{
                         ps.setString(1,taskName);
@@ -53,13 +53,13 @@ public class SqlConnection {
                 }else if(userInput == 3){
                     System.out.println("Enter a task name to update: ");
                     String toUpdate = scanner.nextLine();
-                    if(toUpdate.length() > 25){
+                    if(toUpdate.length() > 50){
                         System.out.println("Task name too long! Try again!");
                         continue;
                     }
                     System.out.println("Enter the new task name: ");
                     String updatedTask = scanner.nextLine();
-                    if(updatedTask.length() > 25){
+                    if(updatedTask.length() > 50){
                         System.out.println("Task name too long! Try again!");
                         continue;
                     }
@@ -74,7 +74,7 @@ public class SqlConnection {
                 }else if(userInput == 4){
                     System.out.println("Which task to delete?");
                     String toDelete = scanner.nextLine();
-                    if(toDelete.length() > 25){
+                    if(toDelete.length() > 50){
                         System.out.println("Task name too long! Try again!");
                         continue;
                     }
